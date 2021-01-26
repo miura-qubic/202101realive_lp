@@ -17,11 +17,21 @@ const tabletwidth = 1025;
 
 
 $(function () {
+	// JQueryの範囲
+
+	// フェードイン
+	$('.fadein, .side_fadein, .fade_txt').on('inview',function(){
+		$(this).addClass('active');
+	});
+
+	// Q&A 開閉
+	$('.top07 dt').click(function(){
+		$(this).next().slideToggle();
+		$(this).toggleClass('open');
+	});
+
+	// 一番最後に記述
 	$("body").removeClass("preload");
-// JQueryの範囲
-
-
-
 
 
 });
