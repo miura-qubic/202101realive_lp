@@ -221,16 +221,16 @@ section,
 
 .fadein{
 	opacity: 0;
-	transform: translateY(200px);
+	transform: translateY(50px);
 }
 .fadein01{
-	transition: 1s cubic-bezier(0,.78,.65,.98);
+	transition: .3s cubic-bezier(0,.78,.65,.98);
 }
 .fadein02{
-	transition: 1s cubic-bezier(0,.78,.65,.98) .3s;
+	transition: .3s cubic-bezier(0,.78,.65,.98) .3s;
 }
 .fadein03{
-	transition: 1s cubic-bezier(0,.78,.65,.98) .6s;
+	transition: .3s cubic-bezier(0,.78,.65,.98) .6s;
 }
 .fadein.active{
 	opacity: 1;
@@ -241,13 +241,13 @@ section,
 	opacity: 0;
 }
 .fade_txt01{
-	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
+	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
 }
 .fade_txt02{
-	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1) .9s;
+	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .4s;
 }
 .fade_txt03{
-	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1) 1.2s;
+	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
 }
 .fade_txt.active{
 	opacity: 1;
@@ -262,37 +262,29 @@ section,
 	opacity: 1;
 }
 .side_fadein01.active{
-	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+	transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .side_fadein02.active{
-	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
+	transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
 }
 .side_fadein03.active{
-	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .9s;
+	transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1) .4s;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 header{
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: auto;
 	padding: 0 2rem;
 	z-index: 50000;
-	transition: background .3s;
-}
-header.active{
-	background: rgba(255, 255, 255, 0.9);
 }
 header .logo{
 	line-height: 1;
-}
-header .logo a{
-	display: inline-block;
 	padding: 2rem;
-	line-height: 1;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 

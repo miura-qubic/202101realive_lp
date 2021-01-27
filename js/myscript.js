@@ -19,14 +19,6 @@ const tabletwidth = 1025;
 $(function () {
 	// JQueryの範囲
 
-	$(window).scroll(function(){
-		if($(window).scrollTop() > 500){
-			$('header').addClass('active');
-		}else{
-			$('header').removeClass('active');
-		}
-	});
-
 	// フェードイン
 	$('.fadein, .side_fadein, .fade_txt').on('inview',function(){
 		$(this).addClass('active');

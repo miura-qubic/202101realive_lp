@@ -175,16 +175,12 @@ section,
 
 .fadein{
 	opacity: 0;
-	transform: translateY(200px);
+	transform: translateY(50px);
 }
-.fadein01{
-	transition: 1s cubic-bezier(0,.78,.65,.98);
-}
-.fadein02{
-	transition: 1s cubic-bezier(0,.78,.65,.98) .3s;
-}
+.fadein01,
+.fadein02,
 .fadein03{
-	transition: 1s cubic-bezier(0,.78,.65,.98) .6s;
+	transition: .3s cubic-bezier(0,.78,.65,.98);
 }
 .fadein.active{
 	opacity: 1;
@@ -194,14 +190,10 @@ section,
 .fade_txt{
 	opacity: 0;
 }
-.fade_txt01{
-	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
-}
-.fade_txt02{
-	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1) .9s;
-}
+.fade_txt01,
+.fade_txt02,
 .fade_txt03{
-	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1) 1.2s;
+	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
 }
 .fade_txt.active{
 	opacity: 1;
@@ -215,41 +207,30 @@ section,
 	width: 100%;
 	opacity: 1;
 }
-.side_fadein01.active{
-	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
-}
-.side_fadein02.active{
-	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
-}
+.side_fadein01.active,
+.side_fadein02.active,
 .side_fadein03.active{
-	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .9s;
+	transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 header{
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: auto;
 	z-index: 50000;
-	transition: background .3s;
-}
-header.active{
-	background: rgba(255, 255, 255, 0.9);
 }
 header .logo{
-	line-height: 1;
-}
-header .logo a{
 	display: inline-block;
-	padding: 0.5rem 2rem;
 	line-height: 1;
+	padding: 0.5rem 2rem;
 }
-header .logo a img{
+header .logo img{
 	display: block;
-	width: 5rem;
+	width: 80px;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
@@ -436,31 +417,32 @@ footer .copyright{
 }
 .top04 .box .item{
 	text-align: center;
-	margin-top: 2rem;
+	margin-top: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .top04 .box .item:first-of-type{
 	margin-top: 0;
 }
 .top04 .box .item .img_wrap{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.top04 .box .item .img_wrap .img{
-	width: 8rem;
+	width: 22%;
 }
 .top04 .box .item .img_wrap img{
 	width: 100%;
 	height: auto;
 }
 .top04 .box .item .txt{
-	margin-top: 1rem;
+	padding-left: 2rem;
+	width: 78%;
 }
 .top04 .box .item .txt h3{
 	font-size: 1rem;
+	text-align: left;
 }
 .top04 .box .item .txt p{
 	font-size: 0.9rem;
+	text-align: left;
 }
 .top04 .btn{
 	margin-top: 3rem;
