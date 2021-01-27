@@ -93,7 +93,7 @@
 							<p>リアライブサンロクマルとは？</p>
 						</div>
 						<div class="txt fadein fadein01">
-							<p>「REALIVE360」は会場から遠く離れた場所でもスマホ、タブレットから<br>アプリで視聴できる“マルチアングル360度映像配信サービス”です。</p>
+							<p>「REALIVE360」は会場から遠く離れた場所でもスマホ、タブレットから<br class="is_hidden_tab">アプリで視聴できる“マルチアングル360度映像配信サービス”です。</p>
 						</div>
 						<div class="youtube_wrap fadein fadein01">
 							<div class="youtube">
@@ -199,7 +199,7 @@
 										最大6アンングル<br>
 										立体音響
 									</h3>
-									<p>※4K/8Kは全周(360度)の解像度です。視聴範囲の解像度ではございません。</p>
+									<p>※4K/8Kは全周(360度)の解像度です。<br class="is_sp">視聴範囲の解像度ではございません。</p>
 								</div>
 							</div>
 	
@@ -283,6 +283,11 @@
 							delay: 6000,
 							disableOnInteraction: true
 						},
+						breakpoints: {
+							767: {
+								spaceBetween: 20,
+							},
+						},
 						navigation: {
 							nextEl: '.top05 .swiper-button-next',
 							prevEl: '.top05 .swiper-button-prev',
@@ -351,27 +356,27 @@
 						<dt>マルチアングルは、生配信でも可能でしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
 						<dd>可能です。生配信（及び擬似ライブ配信）は最大3アングル、オンデマンド配信は最大6アングルでの配信が可能でございます。</dd>
 						<dt>
-							最大6のマルチアングルとのことですが、<br>マルチアングルをしぼっての課金設定は可能でしょうか？<br>
+							最大6のマルチアングルとのことですが、<br class="is_pc">マルチアングルをしぼっての課金設定は可能でしょうか？<br>
 							<span class="small">（例えば、、１カメ（スイッチング）2,000円、3カメ3,000円、6カメ6,000円など）</span>
 							<span class="icon"><i class="fas fa-caret-down"></i></span>
 						</dt>
 						<dd>可能です。ただしオンデマンド配信のみとなります。</dd>
-						<dt>マルチアングルでのオンデマンド配信は、<br>最短で、収録後、どれくらいで配信可能でしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
+						<dt>マルチアングルでのオンデマンド配信は、<br class="is_pc">最短で、収録後、どれくらいで配信可能でしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
 						<dd>エンコード等の処理があり、おおよそ1ヶ月前後のお日にちをいただいております。</dd>
-						<dt>360度VR映像とのことですが、そうなると、<br>ステージの反対側、例えば客席やPAブースや<br>スタッフの姿なども映ってしまうのでしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
+						<dt>360度VR映像とのことですが、そうなると、<br class="is_pc">ステージの反対側、例えば客席やPAブースや<br class="is_pc">スタッフの姿なども映ってしまうのでしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
 						<dd>はい。通常のライブ会場で通常のカメラの様に設置するとその様になります。ホームページのサンプル動画をご参照くださいませ。ただし180°だけモザイク処理を行うといったことも可能でございますのでご相談くださいませ。</dd>
-						<dt>会館の管理運営をしているもので常設導入を検討しております。<br>コストはざっとどれくらいでしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
+						<dt>会館の管理運営をしているもので常設導入を検討しております。<br class="is_pc">コストはざっとどれくらいでしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
 						<dd>現在の光回線の状態等にもよりますので、ご相談いただけます様お願いいたします。</dd>
-						<dt>通常の平面映像の配信と、マルチアングル360°配信を<br>同時に行うことは可能でしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
+						<dt>通常の平面映像の配信と、マルチアングル360°配信を<br class="is_pc">同時に行うことは可能でしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
 						<dd>可能です。平面映像用のカメラ他機材を別に用意する形となります。</dd>
 						<dt>
-							ファンクラブ専用の販売を検討しており、<br>プレイガイドがすでに決まっています。<br>指定プレイガイドでのチケット購入は可能でしょうか？
+							ファンクラブ専用の販売を検討しており、<br class="is_pc">プレイガイドがすでに決まっています。<br class="is_pc">指定プレイガイドでのチケット購入は可能でしょうか？
 							<span class="icon"><i class="fas fa-caret-down"></i></span>
 						</dt>
 						<dd>可能です。シリアルコードを発行いたしますので、そのコードを各プレイガイド様を通じ、お客様へお届けしていただく形となります。</dd>
-						<dt>配信に伴う、著作権使用料の処理・支払いは、<br>どちら（ライブ側、REALIVE360側）になりますでしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
+						<dt>配信に伴う、著作権使用料の処理・支払いは、<br class="is_pc">どちら（ライブ側、REALIVE360側）になりますでしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
 						<dd>JASRAC及びNexToneの処理・支払いはREALIVE360側で行います。ただしカバー曲演奏のための権利者への許諾や、JASRAC及びNexToneに登録されていない楽曲の処理・支払いはライブ側で行っていただく必要がございます。</dd>
-						<dt>配信に伴う、原盤使用許諾料、いわゆるシンクロ料の<br>処理・支払いは、どちら（ライブ側、REALIVE360側）に<br>なりますでしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
+						<dt>配信に伴う、原盤使用許諾料、いわゆるシンクロ料の<br class="is_pc">処理・支払いは、どちら（ライブ側、REALIVE360側）に<br class="is_pc">なりますでしょうか？<span class="icon"><i class="fas fa-caret-down"></i></span></dt>
 						<dd>ライブ側となります。</dd>
 					</dl>
 				</div>
@@ -385,7 +390,7 @@
 						<h2 class="ttl">CONTACT</h2>
 					</div>
 					<div class="txt fadein fadein01">
-						<p>配信のご相談や見積依頼など、<br>気になることがございましたらお気軽にお問合せください。</p>
+						<p>配信のご相談や見積依頼など、<br class="is_pc">気になることがございましたらお気軽にお問合せください。</p>
 					</div>
 
 					<div class="btn fadein fadein01">

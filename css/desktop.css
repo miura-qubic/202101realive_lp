@@ -5,11 +5,11 @@
 /* @media screen and (min-width:1026px) and ( max-width:1279px) {} */
 /* @media screen and (min-width:768px) and ( max-width:1025px) {} */
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ベース設定 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
-@font-face {
+/* @font-face {
 	font-family: "myfont";
 	src: url(../fonts/.woff) format("woff"),
 				url(../fonts/.otf) format("otf");
-}
+} */
 
 
 
@@ -32,6 +32,7 @@ a{
 	max-width: 1920px;
 	margin: 0 auto;
 	height: auto;
+	overflow: hidden;
 }
 section,
 .section{
@@ -532,6 +533,7 @@ footer .copyright{
 	color: #231815;
 	outline: none;
 	transform: translateY(-50%);
+	width: auto;
 }
 .top05 .slider .swiper-button-prev{
 	left: -2rem;

@@ -1,15 +1,16 @@
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ベース設定 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
-@font-face {
+/* @font-face {
 	font-family: "myfont";
 	src: url(../fonts/.woff) format("woff"),
 				url(../fonts/.otf) format("otf");
-}
+} */
 body{-webkit-text-size-adjust: 100%;}
 html{
 	color: #000;
 	font-size: 15px;
 	line-height: 2;
+	font-family: sans-serif;
 	/*font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
 	/*font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
 	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;*/
@@ -17,12 +18,13 @@ html{
 	-webkit-text-size-adjust: 100%;
 }
 a{
-	color: ;
+	color: #fff;
 	display: block;
 }
 #wrapper{
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 }
 section,
 .section{
@@ -63,6 +65,7 @@ section,
 	--twitter: #1DA1F2;
 	--line: #00B900;
 	--youtube: #DA1725;
+	--blue: #008cba;
 }
 .objectCover {
 	width:100%;
@@ -89,33 +92,178 @@ section,
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ベース設定 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.ttl_wrap{
+	position: relative;
+	text-align: center;
+	color: var(--blue);
+	font-family: 'Open Sans', sans-serif;
+}
+.ttl_wrap::before{
+	position: absolute;
+	content: '';
+	bottom: 120%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2px;
+	height: 2.5rem;
+	background: var(--blue);
+}
+.ttl_wrap .ttl{
+	font-size: 2.6rem;
+	letter-spacing: 0.05em;
+	line-height: 1;
+}
+.ttl_wrap p{
+	font-size: 1.28rem;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+}
+.subttl_wrap{
+	position: relative;
+	text-align: center;
+	color: var(--blue);
+	font-family: 'Open Sans', sans-serif;
+}
+.subttl_wrap.bk{
+	color: #040000;
+}
+.subttl_wrap::before{
+	position: absolute;
+	content: '';
+	bottom: 120%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2px;
+	height: 2.5rem;
+	background: var(--blue);
+}
+.subttl_wrap.bk::before{
+	background: #040000;
+}
+.subttl_wrap .subttl{
+	font-size: 1.4rem;
+	line-height: 1.5;
+}
+.btn a{
+	position: relative;
+	background: var(--blue);
+	border: solid 2px var(--blue);
+	width: 100%;
+	padding: 0.25rem 1rem;
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	margin: 0 auto;
+}
+.btn.bk a{
+	background: #040000;
+	border: solid 2px #040000;
+}
+.btn a p{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+.btn a span{
+	margin-left: 0.75rem;
+	font-size: 1.4rem;
+	line-height: 1;
+}
 
+.fadein{
+	opacity: 0;
+	transform: translateY(200px);
+}
+.fadein01{
+	transition: 1s cubic-bezier(0,.78,.65,.98);
+}
+.fadein02{
+	transition: 1s cubic-bezier(0,.78,.65,.98) .3s;
+}
+.fadein03{
+	transition: 1s cubic-bezier(0,.78,.65,.98) .6s;
+}
+.fadein.active{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.fade_txt{
+	opacity: 0;
+}
+.fade_txt01{
+	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
+}
+.fade_txt02{
+	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1) .9s;
+}
+.fade_txt03{
+	transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1) 1.2s;
+}
+.fade_txt.active{
+	opacity: 1;
+}
+
+.side_fadein{
+	opacity: 0;
+	width: 0;
+}
+.side_fadein.active{
+	width: 100%;
+	opacity: 1;
+}
+.side_fadein01.active{
+	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+}
+.side_fadein02.active{
+	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .6s;
+}
+.side_fadein03.active{
+	transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) .9s;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
-.menu_open{
-	width: 3rem;
-	position: relative;
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	z-index: 50000;
 }
-.menu_open span{
-	position: absolute;
-	top:50%;
-	left:50%;
-	background: #fff;
-	width: 40%;
-	height: 2px;
-	transition: .3s;
+header .logo a{
+	display: inline-block;
+	padding: 0.5rem 2rem;
+	line-height: 1;
 }
-.menu_open span:nth-of-type(1){transform:translate(-50%,-50%) translateY(5px);}
-.menu_open span:nth-of-type(2){transform:translate(-50%,-50%);}
-.menu_open span:nth-of-type(3){transform:translate(-50%,-50%) translateY(-5px);}
-.menu_open.active span:nth-of-type(1){transform:translate(-50%,-50%) rotate(45deg);}
-.menu_open.active span:nth-of-type(2){opacity: 0;}
-.menu_open.active span:nth-of-type(3){transform:translate(-50%,-50%) rotate(-45deg);}
+header .logo a img{
+	display: block;
+	width: 5rem;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
+footer{
+	color: #fff;
+	background: #040000;
+	padding: 3rem 0 2rem;
+}
+footer ul{
+	margin-bottom: 2rem;
+}
+footer ul li a{
+	text-align: center;
+	font-size: 0.85rem;
+	padding: 0.5rem;
+}
+footer .copyright{
+	font-size: 0.85rem;
+	text-align: center;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -123,7 +271,8 @@ section,
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 100vh;
+	height: 80vh;
+	min-height: 568px;
 }
 .top01 .video{
   position: absolute;
@@ -131,12 +280,348 @@ section,
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	background: #040000;
 }
 .top01 .video video{
+	display: block;
 	width: 100%;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top02{
+	color: #fff;
+	background: #040000;
+	padding: 7rem 0 3rem;
+}
+.top02::after{
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10rem;
+	background: #040000;
+	transform: skewY(5deg);
+	transform-origin: left center;
+	z-index: 1;
+}
+.top02_in{
+	position: relative;
+	z-index: 2;
+}
+.top02 .txt{
+	margin-top: 1.5rem;
+	text-align: center;
+}
+.top02 .txt p{
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.top02 .youtube_wrap{
+	margin: 2rem auto 3rem;
+}
+.top02 .youtube{
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-top: 56.25%;
+	overflow: hidden;
+}
+.top02 .youtube iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+.top02 .bnr{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1.5rem -1rem 1rem 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top03{
+	background: url(../images/top/top03_bg.png) center center / cover no-repeat;
+	padding: 8rem 0;
+}
+.top03_in{
+	position: relative;
+	z-index: 2;
+}
+.top03 .box{
+	margin-top: 2.5rem;
+}
+.top03 .box .item{
+	margin-top: 2.5rem;
+}
+.top03 .box .item:first-of-type{
+	margin-top: 0;
+}
+.top03 .box .item .bk_box{
+	color: var(--blue);
+	background: #040000;
+	height: 12rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.top03 .box .item .bk_box h3{
+	font-size: 1.6rem;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+	text-align: center;
+	letter-spacing: 0.075em;
+}
+.top03 .box .item .txt{
+	margin-top: 1rem;
+}
+.top03 .box .item .txt p{
+	text-align: center;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.top03 .btn{
+	margin-top: 3rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ04 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top04{
+	color: #fff;
+	background: #040000;
+	padding: 4rem 0;
+}
+.top04::before{
+	position: absolute;
+	content: '';
+	top: -2rem;
+	left: 0;
+	width: 100%;
+	height: 10rem;
+	background: #040000;
+	transform: skewY(-5deg);
+	transform-origin: left center;
+	z-index: 1;
+}
+.top04::after{
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10rem;
+	background: #040000;
+	transform: skewY(5deg);
+	transform-origin: left center;
+	z-index: 1;
+}
+.top04_in{
+	position: relative;
+	z-index: 2;
+}
+.top04 .box{
+	margin-top: 2.5rem;
+}
+.top04 .box .item{
+	text-align: center;
+	margin-top: 2rem;
+}
+.top04 .box .item:first-of-type{
+	margin-top: 0;
+}
+.top04 .box .item .img_wrap{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.top04 .box .item .img_wrap .img{
+	width: 8rem;
+}
+.top04 .box .item .img_wrap img{
+	width: 100%;
+	height: auto;
+}
+.top04 .box .item .txt{
+	margin-top: 1rem;
+}
+.top04 .box .item .txt h3{
+	font-size: 1rem;
+}
+.top04 .box .item .txt p{
+	font-size: 0.9rem;
+}
+.top04 .btn{
+	margin-top: 3rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ04 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ05 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top05{
+	background: var(--blue);
+	padding: 7rem 0 6rem;
+}
+.top05_in{
+	position: relative;
+	z-index: 2;
+}
+.top05 .slider{
+	position: relative;
+	margin-top: 2rem;
+}
+.top05 .box .img img{
+	width: 100%;
+	height: auto;
+}
+.top05 .slider .swiper-button-prev,
+.top05 .slider .swiper-button-next{
+	background: none;
+	font-size: 3rem;
+	line-height: 1;
+	color: #231815;
+	outline: none;
+	transform: translateY(-50%);
+	width: auto;
+	margin-top: 0;
+}
+.top05 .slider .swiper-button-prev{
+	left: -1.5rem;
+}
+.top05 .slider .swiper-button-next{
+	right: -1.5rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ05 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ06 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top06{
+	color: #fff;
+	background: #040000;
+	padding: 6rem 0 6rem;
+}
+.top06::before{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10rem;
+	background: #040000;
+	transform: skewY(-5deg);
+	transform-origin: left center;
+	z-index: 1;
+}
+.top06_in{
+	position: relative;
+	z-index: 2;
+}
+.top06 .box{
+	margin-top: 2.5rem;
+}
+.top06 .box .item{
+	margin-top: 2rem;
+}
+.top06 .box .item:first-of-type{
+	margin-top: 0;
+}
+.top06 .box .item .img img{
+	width: 100%;
+	height: auto;
+}
+.top06 .box .item .txt{
+	margin-top: 1rem;
+	text-align: center;
+}
+.top06 .box .item .txt h3{
+	font-size: 1.1rem;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.6;
+	letter-spacing: 0.05em;
+}
+.top06 .btn{
+	margin-top: 3rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ06 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ07 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top07{
+	background: #040000;
+	padding: 4rem 0;
+}
+.top07 dl{
+	margin-top: 2.5rem;
+}
+.top07 dt,
+.top07 dd{
+	border: solid 2px #7d7d7d;
+}
+.top07 dt{
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.8;
+	background: #6d6c6c;
+	padding: 0.25rem 2rem 0.25rem 0.5rem;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+.top07 dt:first-of-type{
+	margin-top: 0;
+}
+.top07 dd{
+	display: none;
+	background: #fff;
+	padding: 1rem;
+}
+.top07 dt .small{
+	font-size: 0.9rem;
+}
+.top07 dt .icon{
+	position: absolute;
+	top: 50%;
+	right: 0.5rem;
+	transform: translateY(-50%);
+	font-size: 1.8rem;
+	line-height: 1;
+	transition: transform .3s;
+}
+.top07 dt.open .icon{
+	transform: translateY(-50%) rotate(180deg);
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ07 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ08 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top08{
+	background: #040000;
+	padding: 5rem 0 3rem;
+}
+.top08 .txt{
+	margin-top: 2.5rem;
+	text-align: center;
+}
+.top08 .txt p{
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: #fff;
+}
+.top08 .btn{
+	margin-top: 3rem;
+}
+.top08 .txt_link{
+	margin-top: 1rem;
+	text-align: center;
+}
+.top08 .txt_link a{
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	color: var(--blue);
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ08 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
